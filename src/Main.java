@@ -12,6 +12,7 @@ public class Main {
             while (true) {
                 account.withdraw(withdrawalAmount);
                 System.out.println("Снятие успешно: " + withdrawalAmount + " сом");
+                System.out.println("Остаток на счете: " + account.getAmount() + " сом");
             }
         } catch (LimitException e) {
             double remainingAmount = e.getRemainingAmount();
